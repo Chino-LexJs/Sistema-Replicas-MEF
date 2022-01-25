@@ -1,0 +1,33 @@
+<h1 class="mt-4"> Pedido de Replicación Nº {{id}} - Cancelar Replicación</h1>
+<span class="bg-warning form-control">Esta a punto de {{accion}} el siguiente pedido</span>
+<form action="/pedidos/{{accion}}/{{id}}" method="post">
+  <div class="card-body">
+   
+    <p class="card-text">Ingrese Observación:</p>
+
+    <textarea class="form-control" placeholder="Ingrese Observación..." name="observacion" rows="5"></textarea>
+    <br>
+    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+      Ver Detalle
+    </button>
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content modal-xl">
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            {{> replica/detalle detalles}}
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-success btn-block">Confirmar</button>
+  <a href="/pedidos" class="btn btn-secondary btn-block">Volver</a>
+</form>

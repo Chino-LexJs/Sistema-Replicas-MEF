@@ -1,0 +1,77 @@
+Mapa del sitio
+    Empleados
+        listado
+        agregar
+        editar/id
+        eliminar/id
+
+    Clientes
+        listado
+        agregar
+        editar/id
+        eliminar/id
+
+    Subclases
+        listado
+        agregar
+        api
+        editar/id
+        eliminar/id
+        
+    Dinosaurios
+        listado
+        agregar
+        editar/id
+        eliminar/id
+        moldes/id
+        huesos/id
+
+
+    Exhibiciones
+        listado
+        agregar
+        detalle/id
+        editar/id 
+        eliminar/id
+
+    Fosiles
+        listado
+        agregar
+        editar/id
+        eliminar/id
+
+    Guias
+        listado
+        agregar
+        editar/id
+        eliminar/id
+    
+    Pedidos
+        listado
+        agregar
+        detalle/id
+        accion/id (acciones son los estados)
+        replicas (todas las replicas finalizadas)
+        
+        empleados
+        /id/empleados
+    
+    Replicas
+        eliminar/id
+
+
+    
+    Visitas
+        listado
+        agregar
+        editar/id
+        eliminar/id
+
+    Index/
+        login
+        register
+        /403
+
+    agregar admin
+
+    

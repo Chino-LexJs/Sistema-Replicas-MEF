@@ -1,0 +1,7 @@
+<h1 class="mt-4"> Pedido de Replicación Nº {{id}} - Reanudar Replicación</h1>
+<span class="bg-warning form-control">Esta a punto de {{accion}} el siguiente pedido</span>
+<form action="/pedidos/{{accion}}/{{id}}" method="post">
+  {{> replica/detalle detalles}}
+  <button type="submit" class="btn btn-success btn-block">Confirmar</button>
+  <a href="/pedidos" class="btn btn-secondary btn-block">Volver</a>
+</form>

@@ -1,0 +1,55 @@
+<h1 class="mt-4"> Pedido de Replicación Nº {{id}} - Finalizar Pedido</h1>
+<span class="bg-warning form-control">Esta a punto de {{accion}} el siguiente pedido</span>
+<form action="/pedidos/{{accion}}/{{id}}" method="post">
+  <div class="my-4">Fecha Finalizacion de Replica</div>
+  <input class="form-control" type="date" name="fecha_fin" id="InputFechaFinalizacion" required>
+  <button type="button" class="btn btn-info my-4" data-toggle="modal" data-target="#myModal">
+    Ver Detalle
+  </button>
+  <button type="submit" class="btn btn-success btn-block">Confirmar</button>
+  <a href="/pedidos" class="btn btn-secondary btn-block">Volver</a>
+
+</form>
+
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content modal-xl">
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        {{> replica/detalle detalles}}
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  // setea la fecha actual como fecha máxima de "finalización"
+
+
+  $(document).ready(function () {
+    var hoy = formatDate(new Date());
+    document.getElementById("InputFechaFinalizacion").setAttribute("max", hoy);
+    $("#InputFechaFinalizacion").attr("max", hoy);
+  })
+
+  function formatDate(date) {
+    var d = new Date(date),
+      month = '' + (d.getMonth() + 1),
+      day = '' + d.getDate(),
+      year = d.getFullYear()
+
+    if (month.length < 2)
+      month = '0' + month;
+    if (day.length < 2)
+      day = '0' + day;
+
+    return [year, month, day].join('-');
+  }
+</script>

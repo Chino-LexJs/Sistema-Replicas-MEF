@@ -1,0 +1,32 @@
+<h1>Eliminar Empleado</h1>
+<div class="alert alert-danger">Seguro que queres borrar esto ?</div>
+ <table class="table">
+     <thead>
+        <th scope="col">Documento</th>    
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Direccion</th>
+        <th scope="col">Localidad</th>
+        <th scope="col">Email</th>
+        <th scope="col">Fecha de Nacimiento</th>
+        <th scope="col">Telefono</th>
+     </thead>
+    <tbody>
+        <tr>
+            <td>{{empleado.Persona.identificacion}}</td>    
+            <td>{{empleado.Persona.nombre}}</td>
+            <td>{{empleado.Persona.apellido}}</td>
+            <td>{{empleado.Persona.direccion}}</td>
+            <td>{{empleado.Persona.localidad}}</td>
+            <td>{{empleado.Persona.email}}</td>
+            <td>{{empleado.Persona.fecha_nacimiento}}</td>
+            <td>{{empleado.Persona.telefono}}</td>
+        </tr>
+    </tbody>
+ </table>
+
+<form action="/empleados?_method=DELETE" method="POST" >
+<input name="id" type="number" value="{{empleado.id}}" hidden required>
+<button type="submit" class="btn btn-danger btn-block">Eliminar</button>
+<a href="/empleados" class="btn btn-secondary btn-block">Volver</a>
+</form>

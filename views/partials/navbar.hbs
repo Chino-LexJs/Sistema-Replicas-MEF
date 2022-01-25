@@ -1,0 +1,25 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="/">Mef - 
+    {{#if coleccion}}
+      Colección
+    {{/if}}
+    {{#if exhibicion}}
+      Exhibición
+    {{/if}}
+    {{#if secretaria}}
+      Secretaría
+    {{/if}}
+    {{#if taller}}
+      Taller
+    {{/if}}
+    {{#if rrhh}}
+      Recursos Humanos
+    {{/if}}
+  </a>  
+
+  <form method="POST" action="/logout?_method=DELETE">
+    <button type="submit" class="btn btn-danger">
+      Cerrar Sesion
+    </button>
+  </form>
+</nav>
